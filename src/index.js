@@ -6,15 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import AccountProvider from './providers/AccountProvider';
+import UsersProvider from './providers/UsersProvider';
 
 ReactDOM.render(
+  <UsersProvider>
   <AccountProvider>
   <BrowserRouter>
     <App />
   </BrowserRouter>,
   </AccountProvider>,
+  </UsersProvider>,
   document.getElementById('root')
-);
+  );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

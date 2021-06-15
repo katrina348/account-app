@@ -6,6 +6,7 @@ export const AccountConsumer = AccountContext.Consumer
 
 const AccountProvider = (props) => {
   const [userName, setUserName] = useState('katrina348')
+  const [email, setEmail] = useState('katrina348@gmail.com')
   const [membershipLevel, setMembershipLevel] = useState('Gold')
   const [dateJoined, setDateJoined] = useState('08/18/2008')
 
@@ -13,7 +14,12 @@ const AccountProvider = (props) => {
     <AccountContext.Provider value={{
       userName, 
       membershipLevel,
-      dateJoined
+      dateJoined,
+      email,
+      setUserName,
+      setMembershipLevel,
+      setEmail,
+      setDateJoined
     }}>
       {props.children}
     </AccountContext.Provider>
